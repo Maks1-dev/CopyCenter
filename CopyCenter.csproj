@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,16 +55,91 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCopy.Designer.cs">
+      <DependentUpon>FormCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFeedback.Designer.cs">
+      <DependentUpon>FormFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLamination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLamination.Designer.cs">
+      <DependentUpon>FormLamination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrint.Designer.cs">
+      <DependentUpon>FormPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProject.Designer.cs">
+      <DependentUpon>FormProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormService.Designer.cs">
+      <DependentUpon>FormService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelTutorial.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelTutorial.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelTutorial.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelTutorial.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelTutorial.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelTutorial.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>ModelTutorial.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="TableSupply.cs">
+      <DependentUpon>ModelTutorial.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCopy.resx">
+      <DependentUpon>FormCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFeedback.resx">
+      <DependentUpon>FormFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLamination.resx">
+      <DependentUpon>FormLamination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrint.resx">
+      <DependentUpon>FormPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProject.resx">
+      <DependentUpon>FormProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormService.resx">
+      <DependentUpon>FormService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,7 +149,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="ModelTutorial.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelTutorial.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelTutorial.edmx.diagram">
+      <DependentUpon>ModelTutorial.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +171,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\коп.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModelTutorial.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelTutorial.edmx</DependentUpon>
+      <LastGenOutput>ModelTutorial.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelTutorial.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelTutorial.edmx</DependentUpon>
+      <LastGenOutput>ModelTutorial.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

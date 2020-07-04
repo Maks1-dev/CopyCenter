@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CopyCenter
 {
-    public partial class Form1 : Form
+    public partial class FormProject : Form
     {
-        public Form1()
+        public FormProject()
         {
             InitializeComponent();
         }

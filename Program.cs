@@ -8,6 +8,7 @@ namespace CopyCenter
 {
     static class Program
     {
+        public static Сopy_centerEntities4 wftDb = new Сopy_centerEntities4();
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -16,7 +17,7 @@ namespace CopyCenter
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormMenu());
         }
     }
 }

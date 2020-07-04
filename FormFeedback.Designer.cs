@@ -119,10 +119,17 @@
             this.buttonSend.Location = new System.Drawing.Point(321, 261);
             this.buttonSend.Name = "buttonSend";
             this.buttonSend.Size = new System.Drawing.Size(141, 23);
+<<<<<<< HEAD
             this.buttonSend.TabIndex = 19;
             this.buttonSend.Text = "Отправить отзыв";
             this.buttonSend.UseVisualStyleBackColor = true;
             this.buttonSend.Click += new System.EventHandler(this.buttonSend_Click);
+=======
+            this.buttonSend.TabIndex = 18;
+            this.buttonSend.Text = "Отправить отзыв";
+            this.buttonSend.UseVisualStyleBackColor = true;
+            this.buttonSend.Click += new System.EventHandler(this.buttonDel_Click);
+>>>>>>> ff3a75d6a09a3da444939f0e92883cf1f8fa5609
             // 
             // labelFormFeedback
             // 

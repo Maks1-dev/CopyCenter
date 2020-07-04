@@ -10,24 +10,22 @@ using System.Windows.Forms;
 
 namespace CopyCenter
 {
-    public partial class FormService : Form
+    public partial class FormMain : Form
     {
-        public FormService()
+        public FormMain()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            Form formcopy = new FormCopy();
+            Form formcopy = new FormMain();
             formcopy.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form formlamination = new FormLamination();
-            formlamination.Show();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -39,10 +37,26 @@ namespace CopyCenter
         private void button5_Click(object sender, EventArgs e)
         {
             
-=======
-            Form FormOrder = new FormOrder();
-            FormOrder.Show();
->>>>>>> ff3a75d6a09a3da444939f0e92883cf1f8fa5609
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormService_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

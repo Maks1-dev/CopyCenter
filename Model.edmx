@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище ITWebNetModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "ITWebNet.dbo.Авторизация" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Авторизация">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Login" Type="nvarchar(max)" />
+          <Property Name="Password" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Заказ_услуги">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Наименование услуги" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Отзыв">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Наименование услуги" Type="nvarchar(max)" />
+          <Property Name="Отзыв" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK_Заказ_услуги_Отзыв">
+          <End Role="Отзыв" Type="Self.Отзыв" Multiplicity="1" />
+          <End Role="Заказ_услуги" Type="Self.Заказ_услуги" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Отзыв">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Заказ_услуги">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище ITWebNetModelContainer">
+          <EntitySet Name="Заказ_услуги" EntityType="Self.Заказ_услуги" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Отзыв" EntityType="Self.Отзыв" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Авторизация" EntityType="Self.Авторизация" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Авторизация].[id] AS [id], 
+    [Авторизация].[Login] AS [Login], 
+    [Авторизация].[Password] AS [Password]
+    FROM [dbo].[Авторизация] AS [Авторизация]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Заказ_услуги_Отзыв" Association="Self.FK_Заказ_услуги_Отзыв">
+            <End Role="Отзыв" EntitySet="Отзыв" />
+            <End Role="Заказ_услуги" EntitySet="Заказ_услуги" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ITWebNetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Заказ_услуги">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Наименование_услуги" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Отзыв" Relationship="Self.FK_Заказ_услуги_Отзыв" FromRole="Заказ_услуги" ToRole="Отзыв" />
+        </EntityType>
+        <EntityType Name="Отзыв">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Наименование_услуги" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Отзыв1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Заказ_услуги" Relationship="Self.FK_Заказ_услуги_Отзыв" FromRole="Отзыв" ToRole="Заказ_услуги" />
+        </EntityType>
+        <EntityType Name="Авторизация">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Login" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_Заказ_услуги_Отзыв">
+          <End Role="Отзыв" Type="Self.Отзыв" Multiplicity="1" />
+          <End Role="Заказ_услуги" Type="Self.Заказ_услуги" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Отзыв">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Заказ_услуги">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ITWebNetEntities3" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Заказ_услуги" EntityType="Self.Заказ_услуги" />
+          <EntitySet Name="Отзыв" EntityType="Self.Отзыв" />
+          <EntitySet Name="Авторизация" EntityType="Self.Авторизация" />
+          <AssociationSet Name="FK_Заказ_услуги_Отзыв" Association="Self.FK_Заказ_услуги_Отзыв">
+            <End Role="Отзыв" EntitySet="Отзыв" />
+            <End Role="Заказ_услуги" EntitySet="Заказ_услуги" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище ITWebNetModelContainer" CdmEntityContainer="ITWebNetEntities3">
+          <EntitySetMapping Name="Заказ_услуги">
+            <EntityTypeMapping TypeName="ITWebNetModel.Заказ_услуги">
+              <MappingFragment StoreEntitySet="Заказ_услуги">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Наименование_услуги" ColumnName="Наименование услуги" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Отзыв">
+            <EntityTypeMapping TypeName="ITWebNetModel.Отзыв">
+              <MappingFragment StoreEntitySet="Отзыв">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Наименование_услуги" ColumnName="Наименование услуги" />
+                <ScalarProperty Name="Отзыв1" ColumnName="Отзыв" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Авторизация">
+            <EntityTypeMapping TypeName="ITWebNetModel.Авторизация">
+              <MappingFragment StoreEntitySet="Авторизация">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

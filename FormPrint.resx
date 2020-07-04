@@ -117,59 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Log" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Log.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="textBox2.Text" xml:space="preserve">
+    <value>Начав свою деятельность с разработки сайтов, компания с 2009 года расширила компетенцию и спектр предоставляемых услуг прежде всего для корпоративных клиентов (аутсорсинг, аутстаффинг), разработку приложений на технологиях .NET, ASP.NET (C#), разработку хранилищ данных (DWH) на базе Oracle BI, Microstrategy и других систем, администрирование баз данных (DBA), разработку SharePoint приложений, тестирование приложений и сервисов.
+
+Заказчики ITWebNet - компании и частные лица разного профиля, стремящиеся оптимизировать свои затраты на разработку и сопровождение информационных систем, повысить качество и и скорость управления бизнес-процессами за счет новых технологий обработки информации.
+
+Компанией реализовано более 100 проектов в области разработки хранилищ данных, сайтов, десктоп-приложений, сервисов.
+
+</value>
   </data>
-  <data name="NewMain" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\NewMain.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="textBox4.Text" xml:space="preserve">
+    <value>Мы помогаем нашим клиентам быть конкурентными с помощью разработки программного обеспечения, быть доступнее к своим клиентам с помощью разработки сайта, уметь принимать правильные решения с помощью хранилищ данных и систем принятия решений. Мы совершенствуем свою работу, хотим быть лучшими в нашей области за счёт сохранения опыта и использованиясамых передовых технологий. А тем самым, мы совершенствуем наш российский рынок информационных технологий и создаём условия для конкуренции нашей страны во всём мире!</value>
   </data>
-  <data name="12" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="миссия" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\миссия.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="22" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\24.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="о компании" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\о компании.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Комп" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Комп.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="14" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Пожатие" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Пожатие.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="25" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="23" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\23.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="коп" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\коп.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Lodoo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lodoo.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="13" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="миссия1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\миссия1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="цели" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\цели.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="textBox6.Text" xml:space="preserve">
+    <value>- Процесс разработки программного обеспечения должен приводить к эффективному результату.
+- Качественное выполнение поставленных заказчиком задач.
+- Развитие перспективных идей и воплощение их в современное программное обеспечение с использованием новейших технологий.
+- Стать крупным региональным, Российским и мировым разработчиком программного обеспечения и IT консалтинга;</value>
   </data>
 </root>
